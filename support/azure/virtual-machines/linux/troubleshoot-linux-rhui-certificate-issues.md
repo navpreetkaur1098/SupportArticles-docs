@@ -3,9 +3,9 @@ title: Troubleshoot common certificate issues in RHUI
 description: Troubleshoot common Red Hat Update Infrastructure certificate issues in Azure that are caused by expired or missing TLS or SSL certificates.
 author: msaenzbosupport
 ms.author: msaenzbo
-ms.reviewer: divargas-msft, pagienge, v-weizhu
+ms.reviewer: divargas-msft, pagienge, navpreetkaur, v-weizhu
 editor: v-jsitser
-ms.date: 04/28/2024
+ms.date: 10/24/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -110,7 +110,7 @@ All the commands in the following steps should be run by using root privileges o
 3. Reinstall the corresponding `rhui-azure` package by running the `yum reinstall` command:
 
    ```bash
-   sudo yum reinstall $(rpm -qa | grep -i rhui-azure) --disablerepo=* --enablerepo="*microsoft-azure*"
+   sudo yum reinstall $(rpm -qa | grep -i rhui-azure) --disablerepo=* --enablerepo="*microsoft*"
    ```
 
 4. If the `EUS` or `E4S` repo is installed, lock the `releasever` variable:
