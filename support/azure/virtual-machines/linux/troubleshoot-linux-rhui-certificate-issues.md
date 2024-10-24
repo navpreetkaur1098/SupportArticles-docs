@@ -50,7 +50,7 @@ To access RHEL repositories on pay-as-you-go systems in cloud environments, use 
 In this situation, you have to install the new RHUI package in the system. This package has the renewed certificate. To update the RHUI package, run the [yum](https://access.redhat.com/articles/yum-cheat-sheet) command:
 
 ```bash
-sudo yum update -y --disablerepo='*' --enablerepo='*microsoft*'
+sudo yum update -y --disablerepo='*' --enablerepo='*microsoft-azure*'
 ```
 
 The `sudo yum update` command might also update the client certificate package (depending on your RHEL version). This is true even if the command output contains the same expired SSL certificate errors that you see for other repositories. If this update is successful, you have to restore normal connectivity to other RHUI repositories so that you can run `sudo yum update` successfully a second time.
